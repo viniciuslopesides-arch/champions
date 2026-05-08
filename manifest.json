@@ -1,22 +1,25 @@
 {
   "short_name": "Champions",
-  "name": "Champions League Manager Premium",
+  "name": "Champions League Premium",
+  "description": "Gerenciador de partidas da Champions League com design Premium.",
   "icons": [
     {
       "src": "icon-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "icon-512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": "index.html",
-  "background_color": "#000033",
+  "start_url": "./index.html",
   "display": "standalone",
-  "scope": "./",
+  "orientation": "portrait",
+  "background_color": "#000033",
   "theme_color": "#00ffcc",
-  "description": "Gerenciador de partidas da Champions League com design Premium."
+  "scope": "./"
 }
