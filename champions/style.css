@@ -98,3 +98,4 @@ th, td { padding: 12px; text-align: center; border-bottom: 1px solid rgba(255, 2
 th { color: var(--ouro); font-size: 0.8rem; }
 tr:hover { background: rgba(255, 255, 255, 0.03); }
 canvas { max-width: 100%; margin-top: 20px; }
+
