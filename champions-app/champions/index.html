@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Champions Gestor</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#00ffcc" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>🏆 UEFA Champions League</h1>
+    </header>
+
+    <nav>
+      <a href="#cadastro" class="btn-casa">Novo Jogo</a>
+      <a href="#lista-jogos" class="btn-vendas">Confrontos</a>
+      <a href="#classificacao" class="btn-config">Classificação</a>
+    </nav>
+
+    <main>
+      <section id="cadastro">
+        <h2>Registrar Nova Partida</h2>
+        <div style="display: flex; gap: 10px">
+          <div>
+            <p>Gols Casa:</p>
+            <input
+              type="number"
+              id="gols-casa"
+              class="input-dark"
+              value="0"
+              min="0"
+            />
+          </div>
+          <div>
+            <p>Gols Fora:</p>
+            <input
+              type="number"
+              id="gols-fora"
+              class="input-dark"
+              value="0"
+              min="0"
+            />
+          </div>
+        </div>
+        <p>Time da Casa:</p>
+        <input
+          type="text"
+          id="time-casa"
+          class="input-dark"
+          placeholder="Ex: Barcelona"
+        />
+
+        <p>Time de Fora:</p>
+        <input
+          type="text"
+          id="time-fora"
+          class="input-dark"
+          placeholder="Ex: Real Madrid"
+        />
+
+        <p>Estádio / Local:</p>
+        <select id="estadio" class="input-dark">
+          <option value="Spotify Camp Nou ">Spotify Camp Nou Bernabéu</option>
+          <option value="Allianz Arena">Allianz Arena</option>
+          <option value="Wembley">Wembley</option>
+          <option value="Parc des Princes">Parc de Princes</option>
+        </select>
+
+        <p>Data do Jogo:</p>
+        <input type="date" id="data-jogo" class="input-dark" />
+
+        <br /><br />
+        <button onclick="cadastrarJogo()" class="btn-vendas">
+          Agendar Partida
+        </button>
+      </section>
+
+      <hr />
+
+      <section id="lista-jogos">
+        <h2>📅 Próximos Confrontos</h2>
+        <div id="mural-jogos"></div>
+      </section>
+
+      <section id="classificacao">
+        <h2>🏆 Tabela de classificação</h2>
+        <table id="tabela-pontos">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>P</th>
+              <th>J</th>
+              <th>V</th>
+              <th>E</th>
+              <th>D</th>
+              <th>SG</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela"></tbody>
+        </table>
+      </section>
+
+      <section id="estatisticas" class="glass-card" style="margin-top: 30px">
+        <h2>📊 Desempenho de Gols</h2>
+        <canvas id="meuGrafico"></canvas>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
